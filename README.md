@@ -1,4 +1,4 @@
-# Baznas_ID [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://baznas-id.vercel.app/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://baznas-id.vercel.app/)
+# Baznas_ID [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/laughface809/Baznas_ID/blob/main/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/laughface809/Baznas_ID/pulls)
 This app is for helping to give an information about funding and donors.
 
 # Resources
