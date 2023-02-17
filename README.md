@@ -4,7 +4,10 @@ This app is for helping to give an information about funding and donors.
 # Resources
 - https://mui.com/
 - https://reactjs.org/
-- https://www.freecodecamp.org/news/cjn-google-sheets-as-json-endpoint/
+- https://sheet2api.com/google-sheet-to-json-api/
+
+# Backend
+- https://sheet2api.com/v1/iWeyymcZSACT/baznas_id
 
 # Baznas Mindmap
 
