@@ -31,6 +31,7 @@ const Hero = () => {
           paddingRight: 8,
           paddingLeft: 3,
           // backgroundColor: "#F6D087",
+          //
           // backgroundColor: "red",
           borderRadius: "0 40px 40px 0px",
           background:
