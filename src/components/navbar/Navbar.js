@@ -42,7 +42,7 @@ const Navbar = () => {
   ];
   const [open, SetOpen] = useState(false);
   return (
-    <AppBar sx={{ background: "#6a6a6a" }} position={"static"}>
+    <AppBar sx={{ background: "#3C734B" }} position={"static"}>
       <StyledToolbar>
         <SocialBox>
           <Facebook />
@@ -55,8 +55,9 @@ const Navbar = () => {
               sx={{
                 cursor: "pointer",
                 fontSize: "14px",
+                fontWeight: "bold",
               }}
-              onClick={() => window.open(`${item.Link}`,"_self")}
+              onClick={() => window.open(`${item.Link}`, "_self")}
             >
               {item.Name}
             </Typography>
@@ -96,7 +97,9 @@ const Navbar = () => {
                 fontSize: "14px",
               }}
             >
-              {item.Name}
+              {/* <Typography sx={{ backgroundColor: "#393A34" }}>
+                {item.Name}
+              </Typography> */}
             </MenuItem>
           ))}
         </Box>

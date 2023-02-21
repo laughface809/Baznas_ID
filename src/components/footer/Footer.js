@@ -9,7 +9,7 @@ const SocialBox = styled(Box)({
 
 const Footer = () => {
   return (
-    <Box sx={{ background: "#6a6a6a", height: "300px" }}>
+    <Box mt={2} sx={{ background: "#6a6a6a", height: "300px" }}>
       <Stack direction={{ xs: "row", md: "row" }} p={7}>
         <Box flex={1}>
           <Typography color={"white"} align={"center"}>

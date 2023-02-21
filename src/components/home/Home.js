@@ -1,4 +1,4 @@
-import { Box, Container, Stack } from "@mui/material";
+import { Box, Container, Stack, Divider } from "@mui/material";
 import React from "react";
 import Categories from "../category/Categories";
 import Hero from "../hero/Hero";
@@ -7,12 +7,17 @@ import Rightbar from "../rightbar/Rightbar";
 
 const Home = () => {
   return (
-    <Box>
+    <Box
+      sx={{
+        margin: 0,
+        //  backgroundColor: "red"
+      }}
+    >
       <Hero />
-      <Container>
-        <Categories />
-        <hr />
-        <Stack
+      {/* <Container sx={{ backgroundColor: "blue" }}> */}
+      <Categories />
+      <Divider sx={{ backgroundColor: "#3C734B", height: "1px" }} />
+      {/* <Stack
           direction={{ xs: "column", md: "row" }}
           spacing={{ xs: 1, sm: 2, md: 8 }}
           mt={8}
@@ -23,8 +28,8 @@ const Home = () => {
           <Box flex={1}>
             <Rightbar />
           </Box>
-        </Stack>
-      </Container>
+        </Stack> */}
+      {/* </Container> */}
     </Box>
   );
 };

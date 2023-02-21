@@ -1,0 +1,13 @@
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.bg-body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: #EBEBEB; */
+}
