@@ -1,22 +1,17 @@
-import Footer from "./components/footer/Footer";
-import Home from "./components/home/Home";
-import Navbar from "./components/navbar/Navbar";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Details from "./components/details/Details";
-import "./App.css";
-function App() {
+import React from 'react'
+import { MainLayout } from './components/'
+import HomeView from './pages/HomeView'
+import { ThemeProvider } from '@mui/material'
+import theme from './config/theme'
+
+const App = () => {
   return (
-    <>
-      <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/details" element={<Details />} />
-        </Routes>
-      </BrowserRouter>
-      <Footer />
-    </>
-  );
+    <ThemeProvider theme={theme}>
+      <MainLayout>
+        <HomeView />
+      </MainLayout>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
