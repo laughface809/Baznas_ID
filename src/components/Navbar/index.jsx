@@ -6,8 +6,8 @@ const Navbar = ({ position }) => {
         <Box>
             <Nav position={position}>
                 <Link status={'active'}><Typography>Beranda</Typography></Link>
-                <Link><Typography>Tentang Kami</Typography></Link>
-                <Link><Typography>Promosi</Typography></Link>
+                <Link><Typography>Berita</Typography></Link>
+                <Link><Typography>Kontak</Typography></Link>
             </Nav>
         </Box>
     )

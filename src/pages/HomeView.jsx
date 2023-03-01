@@ -10,7 +10,7 @@ const HomeView = () => {
     return (
         <div>
             <Slider>
-                <SliderItem />
+                {/* <SliderItem /> */}
             </Slider>
             <FundInformation />
             <Section>

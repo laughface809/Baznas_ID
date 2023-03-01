@@ -4,6 +4,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Description from './Description';
+import Updates from './Updates';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -12,8 +14,8 @@ function TabPanel(props) {
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
+      id={`vertical-tabpanel-${index}`}
+      aria-labelledby={`vertical-tab-${index}`}
       {...other}
     >
       {value === index && (
@@ -33,12 +35,12 @@ TabPanel.propTypes = {
 
 function a11yProps(index) {
   return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    id: `vertical-tab-${index}`,
+    'aria-controls': `vertical-tabpanel-${index}`,
   };
 }
 
-export default function LeftMenuTabs() {
+export default function VerticalTabs() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -46,22 +48,37 @@ export default function LeftMenuTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Details" {...a11yProps(0)} />
-          <Tab label="Updates" {...a11yProps(1)} />
-          <Tab label="Donor Wall" {...a11yProps(2)} />
-        </Tabs>
-      </Box>
+    <Box
+      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 224 }}
+    >
+      <Tabs
+        orientation="vertical"
+        variant="scrollable"
+        value={value}
+        onChange={handleChange}
+        aria-label="Vertical tabs example"
+        sx={{ borderRight: 1, borderColor: 'divider', minWidth: '8rem', maxWidth: '8rem' }}
+      >
+        <Tab label="Deskripsi" {...a11yProps(0)} />
+        <Tab label="Kabar Terbaru" {...a11yProps(1)} />
+        <Tab label="Daftar Donatur" {...a11yProps(2)} />
+        <Tab label="Pencairan Dana" {...a11yProps(3)} />
+        <Tab label="informasi Penggalangan" {...a11yProps(4)} />
+      </Tabs>
       <TabPanel value={value} index={0}>
-        Item One
+        <Description />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <Updates />
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        Item Four
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        Item Five
       </TabPanel>
     </Box>
   );
