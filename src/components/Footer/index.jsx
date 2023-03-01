@@ -23,8 +23,8 @@ const Footer = () => {
                         <Typography>Halaman</Typography>
                         <Stack mt={2} spacing={1.5}>
                             <NavigationItem>Beranda</NavigationItem>
-                            <NavigationItem>Tentang Kami</NavigationItem>
-                            <NavigationItem>Promosi</NavigationItem>
+                            <NavigationItem>Berita</NavigationItem>
+                            <NavigationItem>Kontak</NavigationItem>
                         </Stack>
                     </Grid>
                     <Grid item md={2} xs={6}>
