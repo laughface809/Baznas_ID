@@ -33,7 +33,7 @@ export default function RightMenuProgress({
         <BorderLinearProgress variant="determinate" value={users.length > 0 ? (users[0].Target / users[0].Terkumpul) * 100 : '50'} />
         <Paper sx={{display: 'flex', placeContent: 'space-between', padding: '1rem', boxShadow: 'none'}}>
           <div>
-            <Typography sx={{fontWeight: 'bold', fontSize: '1.3rem'}}>
+            <Typography sx={{fontWeight: 'bold', fontSize: '1.3rem', overflowWrap: 'anywhere'}}>
               {users.length > 0 ? users[0].Terkumpul : 'Rp. 5000.000'}
             </Typography>
             <Typography sx={{fontSize: '1.4rem'}}>
@@ -41,7 +41,7 @@ export default function RightMenuProgress({
             </Typography>
           </div>
           <div>
-            <Typography sx={{fontWeight: 'bold', fontSize: '1.3rem'}}>
+            <Typography sx={{fontWeight: 'bold', fontSize: '1.3rem', overflowWrap: 'anywhere'}}>
             {users.length > 0 ? users.length - 1 : '20'} 
             </Typography>
             <Typography sx={{fontSize: '1.4rem'}}>
@@ -49,7 +49,7 @@ export default function RightMenuProgress({
             </Typography>
           </div>
           <div>
-            <Typography sx={{fontWeight: 'bold', fontSize: '1.3rem'}}>
+            <Typography sx={{fontWeight: 'bold', fontSize: '1.3rem', overflowWrap: 'anywhere'}}>
               {users.length > 0 ? users[0].Target : 'Rp. Rp. 20.000.000'}
             </Typography>
             <Typography sx={{fontSize: '1.4rem'}}>

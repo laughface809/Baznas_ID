@@ -62,7 +62,7 @@ export default function VerticalTabs({
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: 'divider', minWidth: '8rem', maxWidth: '8rem' }}
+        sx={{ borderRight: 1, borderColor: 'divider', minWidth: {xs: '6rem', md: '8rem'}, maxWidth: {xs: '6rem', md: '8rem'} }}
       >
         <Tab label="Deskripsi" {...a11yProps(0)} />
         <Tab label="Kabar Terbaru (2)" {...a11yProps(1)} />
