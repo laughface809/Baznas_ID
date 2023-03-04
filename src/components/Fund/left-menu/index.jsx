@@ -6,6 +6,9 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Description from './Description';
 import Updates from './Updates';
+import DonorWall from './DonorWall';
+import Disbursement from './Disbursement';
+import Information from './Information';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -40,7 +43,9 @@ function a11yProps(index) {
   };
 }
 
-export default function VerticalTabs() {
+export default function VerticalTabs({
+  users
+}) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -60,9 +65,9 @@ export default function VerticalTabs() {
         sx={{ borderRight: 1, borderColor: 'divider', minWidth: '8rem', maxWidth: '8rem' }}
       >
         <Tab label="Deskripsi" {...a11yProps(0)} />
-        <Tab label="Kabar Terbaru" {...a11yProps(1)} />
-        <Tab label="Daftar Donatur" {...a11yProps(2)} />
-        <Tab label="Pencairan Dana" {...a11yProps(3)} />
+        <Tab label="Kabar Terbaru (2)" {...a11yProps(1)} />
+        <Tab label="Daftar Donatur (3)" {...a11yProps(2)} />
+        <Tab label="Pencairan Dana (1)" {...a11yProps(3)} />
         <Tab label="informasi Penggalangan" {...a11yProps(4)} />
       </Tabs>
       <TabPanel value={value} index={0}>
@@ -72,13 +77,13 @@ export default function VerticalTabs() {
         <Updates />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <DonorWall users={users} />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item Four
+        <Disbursement />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        Item Five
+        <Information />
       </TabPanel>
     </Box>
   );

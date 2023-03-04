@@ -7,6 +7,18 @@ const Recomended = () => {
     const { breakpoints } = useTheme()
     const isMobile = useMediaQuery(breakpoints.down('md'))
 
+    function keyPress(e){
+        if(e.keyCode == 13){
+            window.open(`https://wa.me/08174784804?text=${encodeURI(e.target.value)}`, '_blank');
+        }
+     }
+
+     function sendLink(){
+        window.open(`https://wa.me/08174784804?text=${encodeURI(value)}`, '_blank');
+     }
+
+     const [value, setValue] = React.useState('')
+
     return (
         <Box mb={10}>
             <HeroSection>
@@ -17,9 +29,9 @@ const Recomended = () => {
 
                     <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 5, md: 2 }}>
                         <FormControl>
-                            <InputBase placeholder='Tulis harapan dan masukan' fullWidth />
+                            <InputBase placeholder='Tulis harapan dan masukan' fullWidth onKeyDown={(e) => keyPress(e)} value={value} onChange={(e) => setValue(e.target.value)} />
                         </FormControl>
-                        <Button fullWidth={isMobile ? true : false}>Kirim</Button>
+                        <Button fullWidth={isMobile ? true : false} onClick={() => sendLink()}>Kirim</Button>
                     </Stack>
                 </Content>
             </HeroSection>

@@ -1,13 +1,20 @@
 import React from 'react'
 import { Toolbar, styled, Typography, Box } from '@mui/material'
 
-const Navbar = ({ position }) => {
+const Navbar = ({ 
+    position,
+    setPage,
+    setOpen,
+    status,
+    setStatus
+ }) => {
+
     return (
         <Box>
             <Nav position={position}>
-                <Link status={'active'}><Typography>Beranda</Typography></Link>
-                <Link><Typography>Berita</Typography></Link>
-                <Link><Typography>Kontak</Typography></Link>
+                <Link status={status === 0 && 'active'} onClick={() => {setPage(0);setStatus(0);setOpen(false)}}><Typography>Beranda</Typography></Link>
+                <Link status={status === 1 && 'active'} onClick={() => {setPage(1);setStatus(1);setOpen(false)}}><Typography>Galeri</Typography></Link>
+                <Link status={status === 2 && 'active'} onClick={() => {setPage(2);setStatus(2);setOpen(false)}}><Typography>Kontak</Typography></Link>
             </Nav>
         </Box>
     )

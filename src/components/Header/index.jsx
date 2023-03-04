@@ -6,8 +6,20 @@ import { grey } from '@mui/material/colors'
 import Navbar from '../Navbar'
 import TranslateIcon from '@mui/icons-material/Translate';
 
-const Header = ({ onMenuClick }) => {
+const Header = ({ 
+    onMenuClick,
+    setPage,
+    page,
+    status,
+    setStatus
+ }) => {
     // const theme = useTheme()
+
+    function keyPress(e){
+        if(e.keyCode == 13){
+            window.open(`https://www.google.com/search?q=UPZ+Alhidayah+Gatsu+${e.target.value}`, '_blank');
+        }
+     }
 
     return (
         <Box component={'header'} mb={5}>
@@ -19,7 +31,7 @@ const Header = ({ onMenuClick }) => {
                     <Logo src={LogoImage} sx={{ display: { xs: 'none', md: 'block' } }} />
                 </LeftMenu>
                 <SearchBar>
-                    <InputBase sx={{ fontSize: 14, width: "100%" }} placeholder='Coba cari informasi' />
+                    <InputBase sx={{ fontSize: 14, width: "100%" }} placeholder='Coba cari informasi' onKeyDown={(e) => keyPress(e)} />
                     <Search htmlColor={grey['400']} sx={{cursor: 'pointer'}} />
                 </SearchBar>
                 <RightMenu>
@@ -36,7 +48,7 @@ const Header = ({ onMenuClick }) => {
                     </Typography>
                 </RightMenu>
             </MainHeader>
-            <Navbar position='header' />
+            <Navbar position='header' setPage={setPage} page={page} status={status} setStatus={setStatus} />
         </Box>
     )
 }

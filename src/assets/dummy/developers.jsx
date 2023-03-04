@@ -1,18 +1,22 @@
+import Nanang from '../nanang.jpeg'
+import Bima from '../bima.webp'
+import Fauzi from '../fauzi.jfif'
+
 const developers = [
     {
         name: "Nanang Widyo",
-        developers: "Keterangan",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5LV-mBtR7MVnhQXA0kPHTNd1kiGKne5ftpmt5mFrFoA&s"
+        developers: "Project Coordinator",
+        img: Nanang
     },
     {
         name: "Bima Sena",
-        developers: "Keterangan",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5LV-mBtR7MVnhQXA0kPHTNd1kiGKne5ftpmt5mFrFoA&s"
+        developers: "Web Developer",
+        img: Bima
     },
     {
         name: "Fauzi Hamdani",
-        developers: "Keterangan",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5LV-mBtR7MVnhQXA0kPHTNd1kiGKne5ftpmt5mFrFoA&s"
+        developers: "Web Developer",
+        img: Fauzi
     }
 ]
 
