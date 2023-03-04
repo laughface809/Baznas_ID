@@ -5,7 +5,7 @@ import { Close } from '@mui/icons-material';
 
 const SIDEBAR_WIDTH = 240;
 
-const Sidebar = ({ open, onRequestClose }) => {
+const Sidebar = ({ open, onRequestClose, setPage, setOpen, status, setStatus }) => {
     return (
         <Drawer
             open={open}
@@ -23,7 +23,7 @@ const Sidebar = ({ open, onRequestClose }) => {
                     <Close />
                 </IconButton>
             </Toolbar>
-            <Navbar position='sidebar' />
+            <Navbar position='sidebar' setPage={setPage} setOpen={setOpen} status={status} setStatus={setStatus} />
         </Drawer>
     )
 }

@@ -6,7 +6,7 @@ This app is for helping to give an information about funding and donors.
 - https://reactjs.org/
 - https://sheet2api.com/google-sheet-to-json-api/
 
-# Backend
+# Backend (Not Recommended for free XD haha)
 - https://sheet2api.com/v1/iWeyymcZSACT/baznas_id
 
 # Baznas Mindmap

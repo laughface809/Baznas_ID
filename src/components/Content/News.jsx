@@ -1,23 +1,18 @@
 import React from 'react'
-import { Box, Paper, styled, Grid, Typography, colors } from '@mui/material'
+import { Paper, styled, Grid } from '@mui/material';
 
-const News = ({ name, news }) => {
+const News = ({ src, alt }) => {
     return (
         <Grid xs={12} lg={4} item>
             <StyledPaper elevation={0}>
-                <Box>
-                    <Typography fontWeight={"medium"} mb={2}>{name}</Typography>
-                    <Typography variant='caption' color={colors.grey[500]}>{news}</Typography>
-                </Box>
+            <img src={src} alt={alt} style={{width: '100%', borderRadius: '4px'}} />
             </StyledPaper>
         </Grid>
     )
 }
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
-    padding: 40,
     textAlign: "center",
-    border: '1px solid ' + theme.palette.primary.main,
     borderRadius: 10,
     display: "flex",
     flexDirection: "column",

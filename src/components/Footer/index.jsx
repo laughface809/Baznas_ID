@@ -23,11 +23,11 @@ const Footer = () => {
                         <Typography>Halaman</Typography>
                         <Stack mt={2} spacing={1.5}>
                             <NavigationItem>Beranda</NavigationItem>
-                            <NavigationItem>Berita</NavigationItem>
+                            <NavigationItem>Galeri</NavigationItem>
                             <NavigationItem>Kontak</NavigationItem>
                         </Stack>
                     </Grid>
-                    <Grid item md={2} xs={6}>
+                    <Grid item md={2} xs={6} sx={{overflowWrap: 'break-word'}}>
                         <Typography>Kontak</Typography>
                         <Stack mt={2} spacing={1.5}>
                             <NavigationItem>admin@upzalhidayahgatsu.com</NavigationItem>

@@ -1,14 +1,18 @@
+import Image1 from '../../assets/image-1.jpeg'
+import Image2 from '../../assets/image-2.jpeg'
+import Image3 from '../../assets/image-3.jpeg'
+
 const developers = [
     {
-        name: "Kunjungan Ke Pesantren ...",
+        src: Image1,
         news: "Keterangan"
     },
     {
-        name: "Serah terima sembako ...",
+        src: Image2,
         news: "Keterangan"
     },
     {
-        name: "Rumah Tahfidz ...",
+        src: Image3,
         news: "Keterangan"
     }
 ]
